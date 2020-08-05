@@ -3,7 +3,7 @@ kind: Application
 metadata:
   annotations:
     argocd.argoproj.io/sync-wave: "21"
-  name: petclinic-team-cicd
+  name: contacts-team-dev
   namespace: argocd
 spec:
   destination:
@@ -11,7 +11,7 @@ spec:
     server: https://kubernetes.default.svc
   project: app-team-nonprod
   source:
-    path: environments/petclinic/cicd
+    path: environments/contacts/dev
     repoURL: https://github.com/pittar-gitops/projects-team.git
     targetRevision: master
   syncPolicy:
