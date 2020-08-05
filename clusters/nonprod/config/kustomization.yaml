@@ -4,6 +4,6 @@ namespace: argocd
 resources:
   - 00-cluster-config-proj.yaml
   - 01-oauth-app.yaml
-  - 02-groups-roles-bindings.yaml
-  - 03-sealed-secrets.yaml
-  - 04-operators.yaml
+  - 02-groups-roles-bindings-app.yaml
+  - 03-sealed-secrets-app.yaml
+  - 04-operators-app.yaml
