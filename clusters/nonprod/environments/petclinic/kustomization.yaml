@@ -3,8 +3,8 @@ kind: Kustomization
 namespace: argocd
 resources:
   # DEV envorinment
-  - dev/app-admin.yaml
-  - dev/app-team.yaml
+  - dev/admin-app.yaml
+  - dev/team-app.yaml
   # UAT envorinment
-  - uat/app-admin.yaml
-  - uat/app-team.yaml
+  - uat/admin-app.yaml
+  - uat/team-app.yaml
