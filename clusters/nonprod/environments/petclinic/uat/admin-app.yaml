@@ -3,7 +3,7 @@ kind: Application
 metadata:
   annotations:
     argocd.argoproj.io/sync-wave: "21"
-  name: petclinic-admin-dev
+  name: petclinic-admin-uat
   namespace: argocd
 spec:
   destination:
