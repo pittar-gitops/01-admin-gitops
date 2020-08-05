@@ -3,6 +3,8 @@ kind: Application
 metadata:
   annotations:
     argocd.argoproj.io/sync-wave: "21"
+  labels:
+    gitops.ownedBy: app-admin-nonprod
   name: petclinic-admin-uat
   namespace: argocd
 spec:
