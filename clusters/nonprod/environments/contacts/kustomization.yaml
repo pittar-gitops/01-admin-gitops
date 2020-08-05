@@ -3,10 +3,10 @@ kind: Kustomization
 namespace: argocd
 resources:
   # CI/CD environment
-  # - cicd/team-app.yaml
+  - cicd/team-app.yaml
   # DEV envorinment
   - dev/admin-app.yaml
-  #- dev/team-app.yaml
+  - dev/team-app.yaml
   # UAT envorinment
   - uat/admin-app.yaml
-  #- uat/team-app.yaml
+  - uat/team-app.yaml
