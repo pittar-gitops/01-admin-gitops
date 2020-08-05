@@ -3,6 +3,8 @@ kind: Application
 metadata:
   annotations:
     argocd.argoproj.io/sync-wave: "12"
+  labels:
+    gitops.ownedBy: cluster-config-nonprod
   name: groups-roles-bindings-nonprod
   namespace: argocd
 spec:
