@@ -4,6 +4,7 @@ namespace: argocd
 bases:
   - devops
   - petclinic
+  - contacts
 resources:
   - app-admin-project.yaml
   - app-team-project.yaml
