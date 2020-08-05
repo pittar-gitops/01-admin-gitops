@@ -12,7 +12,7 @@ spec:
   project: cluster-config-nonprod
   source:
     path: cluster-nonprod/04-operators
-    repoURL: https://github.com/clusters.git
+    repoURL: https://github.com/pittar-gitops/clusters.git
     targetRevision: master
   syncPolicy:
     automated:
