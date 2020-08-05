@@ -9,7 +9,7 @@ spec:
   destination:
     namespace: argocd
     server: https://kubernetes.default.svc
-  project: app-admin-dev
+  project: app-admin-nonprod
   source:
     path: environments/petclinic/uat
     repoURL: https://github.com/pittar-gitops/projects-admin.git
