@@ -15,7 +15,7 @@ spec:
   source:
     path: environments/devops/cicd
     repoURL: https://github.com/pittar-gitops/projects-admin.git
-    targetRevision: master
+    targetRevision: pittca
   syncPolicy:
     automated:
       prune: false

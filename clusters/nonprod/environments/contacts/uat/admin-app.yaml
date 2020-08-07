@@ -15,7 +15,7 @@ spec:
   source:
     path: environments/contacts/uat
     repoURL: https://github.com/pittar-gitops/projects-admin.git
-    targetRevision: master
+    targetRevision: pittca
   syncPolicy:
     automated:
       prune: false

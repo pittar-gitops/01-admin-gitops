@@ -13,7 +13,7 @@ spec:
   source:
     path: clusters/nonprod/00-argocd
     repoURL: https://github.com/pittar-gitops/gitops-admin.git
-    targetRevision: master
+    targetRevision: pittca
   syncPolicy:
     automated:
       prune: false

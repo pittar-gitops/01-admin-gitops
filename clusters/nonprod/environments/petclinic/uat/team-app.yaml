@@ -13,7 +13,7 @@ spec:
   source:
     path: environments/petclinic/uat
     repoURL: https://github.com/pittar-gitops/projects-team.git
-    targetRevision: master
+    targetRevision: pittca
   syncPolicy:
     automated:
       prune: false

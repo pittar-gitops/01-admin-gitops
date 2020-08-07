@@ -15,7 +15,7 @@ spec:
   source:
     path: cluster-nonprod/04-operators
     repoURL: https://github.com/pittar-gitops/clusters.git
-    targetRevision: master
+    targetRevision: pittca
   syncPolicy:
     automated:
       prune: false
