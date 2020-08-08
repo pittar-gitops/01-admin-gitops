@@ -8,4 +8,4 @@ resources:
   - 03-sealed-secrets-app.yaml
   - 04-operators-app.yaml
   - 05-cluster-operators-app.yaml
-  - 06-certificates
+  - 06-certificates-app.yaml
