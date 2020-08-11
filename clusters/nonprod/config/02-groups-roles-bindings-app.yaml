@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   annotations:
-    argocd.argoproj.io/sync-wave: "15"
+    argocd.argoproj.io/sync-wave: "16"
   labels:
     gitops.ownedBy: cluster-config-nonprod
   name: groups-roles-bindings-nonprod
