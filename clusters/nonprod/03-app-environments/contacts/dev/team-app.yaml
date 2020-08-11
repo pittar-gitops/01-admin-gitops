@@ -9,9 +9,9 @@ spec:
   destination:
     namespace: argocd
     server: https://kubernetes.default.svc
-  project: app-team-nonprod
+  project: app-team
   source:
-    path: environments/contacts/dev
+    path: app-environments/contacts/dev
     repoURL: https://github.com/pittar-gitops/projects-team.git
     targetRevision: master
   syncPolicy:
