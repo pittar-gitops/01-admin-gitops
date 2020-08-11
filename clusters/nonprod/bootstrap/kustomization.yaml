@@ -1,8 +1,0 @@
-# Copy your sealed-secrets-secert into this dir before running apply -k
-apiVersion: kustomize.config.k8s.io/v1beta1
-kind: Kustomization
-resources:
-- sealed-secrets-namespace.yaml
-- sealed-secrets-secret.yaml
-- bootstrap-project.yaml
-- bootstrap-app.yaml

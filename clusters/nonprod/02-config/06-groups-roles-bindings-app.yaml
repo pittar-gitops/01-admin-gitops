@@ -2,16 +2,16 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   annotations:
-    argocd.argoproj.io/sync-wave: "12"
+    argocd.argoproj.io/sync-wave: "16"
   labels:
-    gitops.ownedBy: cluster-config-nonprod
-  name: groups-roles-bindings-nonprod
+    gitops.ownedBy: cluster-config
+  name: groups-roles-bindings
   namespace: argocd
 spec:
   destination:
     namespace: argocd
     server: https://kubernetes.default.svc
-  project: cluster-config-nonprod
+  project: cluster-config
   source:
     path: cluster-nonprod/02-groups-roles-bindings
     repoURL: https://github.com/pittar-gitops/clusters.git

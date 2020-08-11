@@ -1,19 +1,20 @@
+  
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   annotations:
-    argocd.argoproj.io/sync-wave: "13"
+    argocd.argoproj.io/sync-wave: "12"
   labels:
-    gitops.ownedBy: cluster-config-nonprod
-  name: sealed-secrets-nonprod
+    gitops.ownedBy: cluster-config
+  name: certificates
   namespace: argocd
 spec:
   destination:
     namespace: argocd
     server: https://kubernetes.default.svc
-  project: cluster-config-nonprod
+  project: cluster-config
   source:
-    path: cluster-nonprod/03-sealed-secrets
+    path: cluster-nonprod/06-certificates
     repoURL: https://github.com/pittar-gitops/clusters.git
     targetRevision: master
   syncPolicy:

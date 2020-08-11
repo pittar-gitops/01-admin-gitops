@@ -4,16 +4,16 @@ metadata:
   annotations:
     argocd.argoproj.io/sync-wave: "15"
   labels:
-    gitops.ownedBy: cluster-config-nonprod
-  name: cluster-operators-nonprod
+    gitops.ownedBy: cluster-config
+  name: oauth
   namespace: argocd
 spec:
   destination:
     namespace: argocd
     server: https://kubernetes.default.svc
-  project: cluster-config-nonprod
+  project: cluster-config
   source:
-    path: cluster-nonprod/05-cluster-operators
+    path: cluster-nonprod/01-oauth
     repoURL: https://github.com/pittar-gitops/clusters.git
     targetRevision: master
   syncPolicy:

@@ -2,19 +2,17 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   annotations:
-    argocd.argoproj.io/sync-wave: "14"
-  labels:
-    gitops.ownedBy: cluster-config-nonprod
-  name: operators-nonprod
+    argocd.argoproj.io/sync-wave: "1"
+  name: cluster-bootstrap
   namespace: argocd
 spec:
   destination:
     namespace: argocd
     server: https://kubernetes.default.svc
-  project: cluster-config-nonprod
+  project: cluster-bootstrap
   source:
-    path: cluster-nonprod/04-operators
-    repoURL: https://github.com/pittar-gitops/clusters.git
+    path: clusters/clustername/01-argocd
+    repoURL: https://github.com/pittar-gitops/gitops-admin.git
     targetRevision: master
   syncPolicy:
     automated:

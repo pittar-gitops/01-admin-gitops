@@ -2,8 +2,8 @@ apiVersion: argoproj.io/v1alpha1
 kind: AppProject
 metadata:
   annotations:
-    argocd.argoproj.io/sync-wave: "20"
-  name: app-admin-nonprod
+    argocd.argoproj.io/sync-wave: "-1"
+  name: cluster-bootstrap
   namespace: argocd
 spec:
   clusterResourceWhitelist:
