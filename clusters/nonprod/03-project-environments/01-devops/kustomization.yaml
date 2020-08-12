@@ -1,0 +1,11 @@
+kind: Kustomization
+apiVersion: kustomize.config.k8s.io/v1beta1
+
+# Argo CD expects AppProject and Application CRs in the "argocd" namespace.
+namespace: argocd
+
+# Admin and Team Argo CD Applications for the "cicd" environment.
+resources:
+  # CI/CD envorinment
+  - cicd/admin-app.yaml
+  - cicd/team-app.yaml

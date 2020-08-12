@@ -1,0 +1,14 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+# Argo CD expects AppProject and Application CRs in the "argocd" namespace.
+namespace: argocd
+
+# Base cluster config manifests shared across between clusters.
+bases:
+  - ../../../base/03-project-environments
+  - 01-devops
+  - 02-petclinic
+  - 03-contacts
+
+

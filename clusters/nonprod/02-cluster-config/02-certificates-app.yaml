@@ -1,0 +1,22 @@
+kind: Application  
+apiVersion: argoproj.io/v1alpha1
+metadata:
+  annotations:
+    argocd.argoproj.io/sync-wave: "12"
+  labels:
+    gitops.ownedBy: cluster-config
+  name: certificates
+  namespace: argocd
+spec:
+  destination:
+    namespace: argocd
+    server: https://kubernetes.default.svc
+  project: cluster-config
+  source:
+    path: cluster-nonprod/02-certificates
+    repoURL: https://github.com/pittar-gitops/clusters.git
+    targetRevision: master
+  syncPolicy:
+    automated:
+      prune: false
+      selfHeal: true

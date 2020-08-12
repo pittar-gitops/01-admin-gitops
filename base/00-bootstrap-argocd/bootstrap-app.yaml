@@ -1,0 +1,20 @@
+kind: Application
+apiVersion: argoproj.io/v1alpha1
+metadata:
+  annotations:
+    argocd.argoproj.io/sync-wave: "1"
+  name: cluster-bootstrap
+  namespace: argocd
+spec:
+  destination:
+    namespace: argocd
+    server: https://kubernetes.default.svc
+  project: cluster-bootstrap
+  source:
+    path: clusters/clustername/01-bootstrap-definition
+    repoURL: https://github.com/pittar-gitops/gitops-admin.git
+    targetRevision: master
+  syncPolicy:
+    automated:
+      prune: false
+      selfHeal: true
