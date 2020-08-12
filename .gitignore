@@ -1,1 +1,2 @@
 clusters/nonprod/bootstrap/sealed-secrets-secret.yaml
+clusters/nonprod/00-bootstrap/sealed-secrets-secret.yaml

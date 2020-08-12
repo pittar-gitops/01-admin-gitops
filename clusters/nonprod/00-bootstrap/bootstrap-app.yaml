@@ -11,7 +11,7 @@ spec:
     server: https://kubernetes.default.svc
   project: cluster-bootstrap-nonprod
   source:
-    path: clusters/nonprod/00-argocd
+    path: clusters/nonprod/01-cluster-definition
     repoURL: https://github.com/pittar-gitops/gitops-admin.git
     targetRevision: pittca
   syncPolicy:
