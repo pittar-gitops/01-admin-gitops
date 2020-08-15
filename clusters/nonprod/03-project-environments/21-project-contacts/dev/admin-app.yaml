@@ -13,8 +13,8 @@ spec:
     server: https://kubernetes.default.svc
   project: app-admin
   source:
-    path: environments/dev
-    repoURL: https://github.com/pittar-gitops/21-project-contacts.git
+    path: project-environments/21-project-contacts/dev
+    repoURL: https://github.com/pittar-gitops/03-admin-projects.git
     targetRevision: master
   syncPolicy:
     automated:
