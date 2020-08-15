@@ -2,21 +2,19 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   annotations:
-    argocd.argoproj.io/sync-wave: "21"
-  labels:
-    gitops.ownedBy: app-admin
-  name: devops-admin-cicd
+    argocd.argoproj.io/sync-wave: "31"
+  name: contacts-team-cicd
   namespace: argocd
 spec:
   destination:
     namespace: argocd
     server: https://kubernetes.default.svc
-  project: app-admin
+  project: app-team
   source:
-    path: project-envronments/devops/cicd
-    repoURL: https://github.com/pittar-gitops/projects-admin.git
+    path: environments/cicd
+    repoURL: https://github.com/pittar-gitops/21-project-contacts.git
     targetRevision: master
   syncPolicy:
     automated:
       prune: false
-      selfHeal: false
+      selfHeal: true

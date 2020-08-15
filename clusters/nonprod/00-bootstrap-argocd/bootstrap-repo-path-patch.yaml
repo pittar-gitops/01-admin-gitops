@@ -1,4 +1,4 @@
 # PetClinic service accounts and projects.
 - op: replace
   path: "/spec/source/path"
-  value: "clusters/nonprod/01-argocd"
+  value: "clusters/nonprod/01-bootstrap-definition"

@@ -7,8 +7,8 @@ namespace: argocd
 # Base cluster config manifests shared across between clusters.
 bases:
   - ../../../base/03-project-environments
-  - 01-devops
-  - 02-petclinic
-  - 03-contacts
+  - 10-tools-cicd
+  - 20-project-petclinic
+  - 21-project-contacts
 
 

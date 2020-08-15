@@ -3,7 +3,7 @@ kind: Application
 metadata:
   annotations:
     argocd.argoproj.io/sync-wave: "31"
-  name: devops-team-cicd
+  name: contacts-team-dev
   namespace: argocd
 spec:
   destination:
@@ -11,10 +11,10 @@ spec:
     server: https://kubernetes.default.svc
   project: app-team
   source:
-    path: project-environments/devops/cicd
-    repoURL: https://github.com/pittar-gitops/projects-team.git
+    path: environments/dev
+    repoURL: https://github.com/pittar-gitops/21-project-contacts.git
     targetRevision: master
   syncPolicy:
     automated:
       prune: false
-      selfHeal: false
+      selfHeal: true

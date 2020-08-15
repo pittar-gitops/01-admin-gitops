@@ -13,8 +13,8 @@ spec:
     server: https://kubernetes.default.svc
   project: cluster-config
   source:
-    path: cluster-nonprod/05-oauth
-    repoURL: https://github.com/pittar-gitops/clusters.git
+    path: nonprod/05-oauth
+    repoURL: https://github.com/pittar-gitops/02-admin-clusters.git
     targetRevision: master
   syncPolicy:
     automated:
