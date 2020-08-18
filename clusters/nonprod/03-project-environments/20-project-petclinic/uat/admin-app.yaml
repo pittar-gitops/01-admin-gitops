@@ -13,7 +13,7 @@ spec:
     server: https://kubernetes.default.svc
   project: app-admin
   source:
-    path: project-environments/20-project-petclinic/uat
+    path: environments/20-project-petclinic/uat
     repoURL: https://github.com/pittar-gitops/03-admin-projects.git
     targetRevision: master
   syncPolicy:
