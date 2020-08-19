@@ -12,6 +12,8 @@ spec:
   destinations:
     - namespace: '*'
       server: '*'
+  orphanedResources:
+    warn: false
   sourceRepos:
     - '*'
 
