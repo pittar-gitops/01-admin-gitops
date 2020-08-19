@@ -3,6 +3,7 @@ apiVersion: argoproj.io/v1alpha1
 metadata:
   annotations:
     argocd.argoproj.io/sync-wave: "14"
+    argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
   labels:
     gitops.ownedBy: cluster-config
   name: cluster-operator-instances
