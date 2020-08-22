@@ -7,4 +7,4 @@ namespace: argocd
 # Aggregate all Argo CD AppProject and Applications.  This is an "App of Apps" for the entire cluster.
 bases:
   - ../02-cluster-config
-  - ../03-project-environments
+#  - ../03-project-environments
