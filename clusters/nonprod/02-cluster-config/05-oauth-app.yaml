@@ -3,6 +3,7 @@ apiVersion: argoproj.io/v1alpha1
 metadata:
   annotations:
     argocd.argoproj.io/sync-wave: "15"
+    argocd.argoproj.io/compare-options: IgnoreExtraneous
   labels:
     gitops.ownedBy: cluster-config
   name: oauth
