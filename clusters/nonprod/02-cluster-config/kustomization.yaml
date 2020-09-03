@@ -20,5 +20,5 @@ resources:
   # - 02-certificates-app.yaml
   - 03-operators-app.yaml
   - 04-cluster-operator-instances-app.yaml
-  #- 05-oauth-app.yaml
-  #- 06-groups-roles-bindings-app.yaml
+  - 05-oauth-app.yaml
+  - 06-groups-roles-bindings-app.yaml
