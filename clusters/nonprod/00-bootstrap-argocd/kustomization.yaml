@@ -15,8 +15,8 @@ bases:
 #
 # More info on Sealed Secrets here: https://github.com/bitnami-labs/sealed-secrets
 
-#resources:
-#  - sealed-secrets-secret.yaml
+resources:
+  - sealed-secrets-secret.yaml
 
 # Patch the source git repo path to use the "nonprod" directory. 
 patchesJson6902:
