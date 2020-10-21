@@ -1,0 +1,28 @@
+kind: Kustomization
+apiVersion: kustomize.config.k8s.io/v1beta1
+
+# The diretory to find base resources for the bootstrap Argo CD project and app, and sealed secrets namespace.
+bases:
+  - ../../../base/00-bootstrap-argocd
+
+# If you intend to seed the Sealed Secrets controller with a known secret, uncomment the resources stanza
+# and make sure your sealed secrets Secret is in this directory.
+# Ensure this secret is part of your .gitignore.  You don't want to check it into source control!
+#
+# If you leave "sealed-secrets-secret.yaml" commented out, Sealed Secrets will still be installed into your cluster
+# and a new TLS secret will be automatically generated.  You an then extract this secret to generete your own
+# sealed secrets using the "kubeseal" CLI.  
+#
+# More info on Sealed Secrets here: https://github.com/bitnami-labs/sealed-secrets
+
+resources:
+  - sealed-secrets-secret.yaml
+
+# Patch the source git repo path to use the "nonprod" directory. 
+patchesJson6902:
+  - target:
+      group: argoproj.io
+      version: v1alpha1
+      kind: Application
+      name: cluster-bootstrap
+    path: bootstrap-repo-path-patch.yaml

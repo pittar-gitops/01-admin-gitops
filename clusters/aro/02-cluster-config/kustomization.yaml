@@ -1,0 +1,24 @@
+kind: Kustomization
+apiVersion: kustomize.config.k8s.io/v1beta1
+
+# Argo CD expects AppProject and Application CRs in the "argocd" namespace.
+namespace: argocd
+
+# Base cluster config manifests shared across between clusters.
+bases:
+  - ../../../base/02-cluster-config
+
+# Argo CD Applications for each cluster configuration component.
+# These are ordered (as much as possible) by Argo CD "sync-waves".
+#
+# 02-certificates-app.yaml is commented out as it is currently just an example.
+# If your cluster is on AWS and you can create an IAM user with Route53 privileges, then you
+# can enable this app, provided the credentials as a "Sealed Secret" and have Let's Encrypt
+# certs auto-generated for your cluster router and API.
+resources:
+  - 01-sealed-secrets-app.yaml
+  # - 02-certificates-app.yaml
+  - 03-operators-app.yaml
+  - 04-cluster-operator-instances-app.yaml
+  - 05-oauth-app.yaml
+  - 06-groups-roles-bindings-app.yaml

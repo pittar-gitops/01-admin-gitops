@@ -1,2 +1,3 @@
 clusters/nonprod/bootstrap/sealed-secrets-secret.yaml
 clusters/nonprod/00-bootstrap-argocd/sealed-secrets-secret.yaml
+clusters/aro/00-bootstrap-argocd/sealed-secrets-secret.yaml

@@ -12,7 +12,7 @@ spec:
   project: cluster-bootstrap
   source:
     path: clusters/clustername/01-bootstrap-definition
-    repoURL: https://github.com/pittar-gitops/gitops-admin.git
+    repoURL: https://github.com/pittar-gitops/01-admin-gitops.git
     targetRevision: master
   syncPolicy:
     automated:

@@ -1,0 +1,10 @@
+kind: Kustomization
+apiVersion: kustomize.config.k8s.io/v1beta1
+
+# Argo CD expects AppProject and Application CRs in the "argocd" namespace.
+namespace: argocd
+
+# Aggregate all Argo CD AppProject and Applications.  This is an "App of Apps" for the entire cluster.
+bases:
+  - ../02-cluster-config
+  - ../03-project-environments
