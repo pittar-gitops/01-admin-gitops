@@ -13,7 +13,7 @@ spec:
   source:
     path: environments/dev
     repoURL: https://github.com/pittar-gitops/21-project-contacts.git
-    targetRevision: master
+    targetRevision: aro
   syncPolicy:
     automated:
       prune: false
